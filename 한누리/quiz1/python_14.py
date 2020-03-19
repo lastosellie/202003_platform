@@ -19,4 +19,4 @@ try:
     print(s)
 
 except ValueError:
-    print("입력 형식이 잘못되었습니다")
+    print("입력 형식이 잘못되었습니다.")

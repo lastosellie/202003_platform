@@ -4,13 +4,10 @@
 그외에는 수를 출력하는 프로그램을 만드시오."""
 
 for i in range(1, 101):
-    ret = ""
     s = str(i)
     if s.find("3") != -1 or s.find("6") != -1 or s.find("9") != -1:
-        ret += "짝"
-    if i % 5 == 0:
-        ret += "아자"
-    if ret == "":
-        print(i, end=" ")
+        print("{:<2}".format("짝"), end="")
+    elif i % 5 == 0:
+        print("{:<3}".format("아자"), end="")
     else:
-        print(ret, end=" ")
+        print("{:<3}".format(i), end="")
