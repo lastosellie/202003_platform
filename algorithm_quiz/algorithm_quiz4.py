@@ -17,17 +17,3 @@ print(greedy())
 동전의 종류 :  100 50 10
 100원 동전 10개, 50원 동전 1개, 10원 동전 0개
 '''
-def greedy():
-    output = ""
-    total = int(input("액수입력 : "))
-    kindsofcoins = {int(i): 0 for i in input("동전의 종류 : ").split(" ")}
-    for coin in sorted(kindsofcoins.keys(), reverse=True):
-        kindsofcoins[coin] = total // coin
-        total = total % coin
-    for item in kindsofcoins.items():
-        output += "{}원 동전 {}개, ".format(*item)
-    return output.strip(' ,')
-try:
-    print(greedy())
-except ValueError:
-    print("No.. input is not a valid.")
